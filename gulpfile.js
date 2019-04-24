@@ -39,6 +39,12 @@ function watch() {
   gulp.watch(paths.html).on('change', browserSync.reload);
 }
 
+function build() {
+  return gulp.parallel(style, scripts, watch)();
+}
+
 exports.style = style;
 exports.scripts = scripts;
 exports.watch = watch;
+exports.build = build;
+exports.default = build;

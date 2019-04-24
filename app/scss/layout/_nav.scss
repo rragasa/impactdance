@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+// basic header styles
+header {
+  box-shadow: 0px 5px 5px #999999;
+  height: 100px;
+  position: relative;
+  background: #54318B;
+}
+
+// nav styles
+.mobile-nav-wrap {
+  @media (min-width: 768px) {
+    /* display: none; */
+  }
+}
+
+.mobile-logo {
+  //padding: 15px 50px 100px 50px;
+
+  img {
+    width: 210px;
+    height: 100%;
+  }
+}
+
+// styling of dropdown menu
+.mobile-header-nav {
+  background-color: #54318B;
+  display: none; // hide until menu is clicked
+  list-style: none; // replace with %styled-list
+  margin: 0; // replace with %styled-list
+  padding: 20px 15px 200px 15px; // replace with %styled-list
+  position: absolute;
+  top: 100px; // if nav sliding in below header
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+
+  li {
+    a {
+      color: white;
+      display: block;
+      padding: 0px;
+      text-align: left;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      font-size: 1.8rem;
+      font-weight: bold;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+// styling of hamburger menu
+.hamburger-menu {
+  height: 100px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .menu-item {
+    background: #fff;
+    display: block;
+    height: 5px;
+    margin: 0 0 10px;
+    transition: all 0.3s ease-in-out;
+    width: 40px;
+  }
+
+  &.open {
+    .menu-item {
+      margin: 0 0 5px;
+
+      &:first-child {
+        transform: rotate(45deg);
+        transform-origin: 5px;
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        transform-origin: 8px;
+      }
+    }
+  }
+}
