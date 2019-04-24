@@ -18,7 +18,10 @@ header {
 }
 
 .mobile-logo {
-  //padding: 15px 50px 100px 50px;
+  @include mq($from: desktop) {
+    padding-left: 100px !important;
+  }
+
 
   img {
     width: 210px;
@@ -37,6 +40,11 @@ header {
   top: 100px; // if nav sliding in below header
   width: 100%;
   font-family: 'Open Sans', sans-serif;
+
+  @include mq($from: desktop) {
+    padding-left: 100px;
+  }
+
 
   li {
     a {
@@ -60,6 +68,11 @@ header {
 .hamburger-menu {
   height: 100px;
   transition: all 0.3s ease-in-out;
+
+  @include mq($from: desktop) {
+    padding-right: 100px !important;
+  }
+
 
   &:hover {
     cursor: pointer;

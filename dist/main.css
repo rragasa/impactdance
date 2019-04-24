@@ -1208,6 +1208,10 @@ header {
   .mobile-nav-wrap {
     /* display: none; */ } }
 
+@media (min-width: 60em) {
+  .mobile-logo {
+    padding-left: 100px !important; } }
+
 .mobile-logo img {
   width: 210px;
   height: 100%; }
@@ -1222,6 +1226,9 @@ header {
   top: 100px;
   width: 100%;
   font-family: 'Open Sans', sans-serif; }
+  @media (min-width: 60em) {
+    .mobile-header-nav {
+      padding-left: 100px; } }
   .mobile-header-nav li a {
     color: white;
     display: block;
@@ -1237,6 +1244,9 @@ header {
 .hamburger-menu {
   height: 100px;
   transition: all 0.3s ease-in-out; }
+  @media (min-width: 60em) {
+    .hamburger-menu {
+      padding-right: 100px !important; } }
   .hamburger-menu:hover {
     cursor: pointer; }
   .hamburger-menu .menu-item {
