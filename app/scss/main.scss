@@ -1,5 +1,2 @@
-@import "vendor/normalize";
-
-body {
-  background: pink;
-}
+@import "node_modules/basscss/css/basscss";
+@import "app/scss/vendor/normalize";
