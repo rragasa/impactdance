@@ -1,4 +1,3 @@
-@import "node_modules/basscss/css/basscss";
 @import "app/scss/vendor/normalize";
 @import "node_modules/compass-mixins/lib/compass/css3";
 
@@ -6,3 +5,4 @@
 @import "app/scss/layout/body";
 @import "app/scss/layout/breakpoints";
 @import "app/scss/layout/nav";
+@import "app/scss/layout/jumbotron";
