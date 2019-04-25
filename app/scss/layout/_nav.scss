@@ -2,13 +2,6 @@
   box-sizing: border-box;
 }
 
-.wrapper {
-  margin: 0 auto;
-  max-width: 1600px;
-  position: relative;
-  width: 90%;
-}
-
 // basic header styles
 #site-header {
   padding: 1em 0;
@@ -41,7 +34,7 @@
   z-index: 3;
 
   ul {
-    line-height: 1;
+    line-height: 1.2;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -50,8 +43,8 @@
       a {
         font-family: 'Open Sans', sans-serif;
         color: white;
-        font-size: 1.8rem;
-        font-weight: bold;
+        font-size: 1.5em;
+        font-weight: 600;
         text-decoration: none;
 
         &:hover {

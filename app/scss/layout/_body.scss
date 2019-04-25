@@ -2,4 +2,9 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.content {}
+.wrapper {
+  margin: 0 auto;
+  max-width: 1600px;
+  position: relative;
+  width: 90%;
+}

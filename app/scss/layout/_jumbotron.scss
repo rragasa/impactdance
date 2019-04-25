@@ -1,8 +1,24 @@
-.parallax-container {
-  height: 350px;
-  width: 100%;
+.headline-wrapper {
+  min-height: 0;
+  position: relative;
+}
 
-  @include mq($from: desktop) {
-    height: 500px;
+.headline-image-container {
+  height: 120vw;
+  position: relative;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+
+  @include mq($from: tablet) {
+    top: auto;
+  }
+
+
+  img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
   }
 }
