@@ -2,63 +2,61 @@
   box-sizing: border-box;
 }
 
-// basic header styles
-header {
-  height: 100px;
+.wrapper {
+  margin: 0 auto;
+  max-width: 1600px;
   position: relative;
+  width: 90%;
+}
+
+// basic header styles
+#site-header {
+  padding: 1em 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
   background: #54318B;
-  z-index: 99999;
-}
+  z-index: 4;
 
-// nav styles
-.mobile-nav-wrap {
-  @media (min-width: 768px) {
-    /* display: none; */
+  .logo {
+    img {
+      width: 180px;
+      height: 100%;
+    }
   }
 }
 
-.mobile-logo {
-  @include mq($from: desktop) {
-    padding-left: 100px !important;
-  }
-
-
-  img {
-    width: 210px;
-    height: 100%;
-  }
-}
-
-// styling of dropdown menu
-.mobile-header-nav {
+.site-navigation {
+  display: none;
   background-color: #54318B;
-  display: none; // hide until menu is clicked
-  list-style: none; // replace with %styled-list
-  margin: 0; // replace with %styled-list
-  padding: 20px 15px 200px 15px; // replace with %styled-list
-  position: absolute;
-  top: 100px; // if nav sliding in below header
-  width: 100%;
-  font-family: 'Open Sans', sans-serif;
+  left: 0;
+  min-height: 100vh;
+  padding: 85px 0;
+  position: fixed;
+  right: 0;
+  top: -100vh;
+  -webkit-transition: top 0.75s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: top 0.75s cubic-bezier(0.86, 0, 0.07, 1);
+  z-index: 3;
 
-  @include mq($from: desktop) {
-    padding-left: 100px;
-  }
+  ul {
+    line-height: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 
+    li {
+      a {
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-decoration: none;
 
-  li {
-    a {
-      color: white;
-      display: block;
-      padding: 0px;
-      text-align: left;
-      text-decoration: none;
-      transition: all 0.3s ease-in-out;
-      font-size: 1.8rem;
-      font-weight: bold;
-
-      &:hover {
-        opacity: 0.5;
+        &:hover {
+          opacity: 0.5;
+        }
       }
     }
   }
@@ -66,13 +64,11 @@ header {
 
 // styling of hamburger menu
 .hamburger-menu {
-  height: 100px;
-  transition: all 0.3s ease-in-out;
-
-  @include mq($from: desktop) {
-    padding-right: 100px !important;
-  }
-
+  height: 24px;
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 32px;
 
   &:hover {
     cursor: pointer;
@@ -81,19 +77,25 @@ header {
   .menu-item {
     background: #fff;
     display: block;
-    height: 5px;
-    margin: 0 0 10px;
+    height: 4px;
+    margin: 0 0 5px;
     transition: all 0.3s ease-in-out;
-    width: 40px;
+    width: 30px;
   }
+}
 
+body {
   &.open {
+    .site-navigation {
+      top: 0;
+    }
+
     .menu-item {
-      margin: 0 0 5px;
+      margin: 0 0 2px;
 
       &:first-child {
         transform: rotate(45deg);
-        transform-origin: 5px;
+        transform-origin: 6px;
       }
 
       &:nth-child(2) {

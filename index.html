@@ -14,14 +14,21 @@
 </head>
 
 <body>
-    <header>
-        <div class="clearfix left pt2 pl2 mobile-logo">
-            <a href=" #">
+    <header id="site-header">
+        <div class="wrapper">
+            <a href=" #" class="logo">
                 <img src="app/imgs/White_Logo.png" alt="Impact Dance Logo" />
             </a>
+            <a class="mobile-menu-toggle js-toggle-menu hamburger-menu" href="#">
+                <span class="menu-item"></span>
+                <span class="menu-item"></span>
+                <span class="menu-item"></span>
+            </a>
         </div>
-        <nav class="mobile-nav-wrap" role="navigation">
-            <ul class="mobile-header-nav">
+    </header>
+    <nav class="site-navigation" role="navigation">
+        <div class="wrapper">
+            <ul>
                 <li><a href="#">Academy</a></li>
                 <li><a href="#">Events</a></li>
                 <li><a href="#">Impact Youth</a></li>
@@ -29,13 +36,8 @@
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Support</a></li>
             </ul>
-        </nav>
-        <a class="mobile-menu-toggle js-toggle-menu hamburger-menu right pt3 pr2" href="#">
-            <span class="menu-item"></span>
-            <span class="menu-item"></span>
-            <span class="menu-item"></span>
-        </a>
-    </header>
+        </div>
+    </nav>
     <div class="parallax-container" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="app/imgs/background.jpeg"
         data-natural-width="1400" data-natural-height="900"></div>
     <div class="content">

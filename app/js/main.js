@@ -1,6 +1,6 @@
 // open mobile menu
-$('.js-toggle-menu').click(function(e){
+$('body').click(function(e){
   e.preventDefault();
-  $('.mobile-header-nav').slideToggle();
+  $('.site-navigation').slideToggle();
   $(this).toggleClass('open');
 });
