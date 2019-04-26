@@ -1,5 +1,7 @@
-.html {
+.html, body {
   font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  color: #4d4d4d;
 }
 
 .wrapper {
@@ -9,7 +11,7 @@
   width: 90%;
 
   @include mq($from: desktop) {
-    width: 80F1 0.5%;
+    width: 80%;
   }
 }
 
