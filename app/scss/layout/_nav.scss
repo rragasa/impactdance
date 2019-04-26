@@ -77,12 +77,8 @@
   }
 }
 
-body {
+.hamburger-menu {
   &.open {
-    .site-navigation {
-      top: 0;
-    }
-
     .menu-item {
       margin: 0 0 2px;
 
@@ -101,4 +97,8 @@ body {
       }
     }
   }
+}
+
+.open-nav {
+  top: 0;
 }
