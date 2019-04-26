@@ -2,6 +2,7 @@
 @import "node_modules/compass-mixins/lib/compass/css3";
 
 // Layout
+@import "app/scss/layout/fonts";
 @import "app/scss/layout/body";
 @import "app/scss/layout/breakpoints";
 @import "app/scss/layout/nav";

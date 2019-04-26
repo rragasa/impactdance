@@ -28,6 +28,11 @@ function scripts() {
     .pipe(browserSync.stream())
 }
 
+function fonts() {
+  return gulp.src('app/scss/fonts/*.{eot,svg,ttf,woff,woff2}')
+  .pipe(gulp.dest('dist/fonts/'))
+}
+
 function watch() {
   browserSync.init({
     server: {
@@ -40,11 +45,12 @@ function watch() {
 }
 
 function build() {
-  return gulp.parallel(style, scripts, watch)();
+  return gulp.parallel(style, scripts, fonts, watch)();
 }
 
 exports.style = style;
 exports.scripts = scripts;
+exports.fonts = fonts;
 exports.watch = watch;
 exports.build = build;
 exports.default = build;

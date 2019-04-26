@@ -16,6 +16,11 @@
   }
 
 
+  @include mq($from: desktop) {
+    height: 500px;
+  }
+
+
   img {
     width: 100vw;
     height: 100%;
