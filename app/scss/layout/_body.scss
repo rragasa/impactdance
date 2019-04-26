@@ -7,8 +7,17 @@
   max-width: 1600px;
   position: relative;
   width: 90%;
+
+  @include mq($from: desktop) {
+    width: 80F1 0.5%;
+  }
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: "Impact Grotesk Regular";
 }
