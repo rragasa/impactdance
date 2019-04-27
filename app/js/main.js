@@ -6,6 +6,18 @@ $('.hamburger-menu').click(function(e){
   $(this).toggleClass('open');
 });
 
+// open modal
+$('.read-more').click(function(e){
+  e.preventDefault();
+  $('.modal').toggleClass('modal-open');
+});
+
+// close modal
+$('.modal-close').click(function(e){
+  e.preventDefault();
+  $('.modal').removeClass('modal-open');
+});
+
 // Google maps
 
 // Initialize and add the map

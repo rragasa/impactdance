@@ -1,0 +1,72 @@
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.9);
+  transition: opacity .25s ease;
+  z-index: 4;
+
+  &-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.modal-open {
+    .modal-inner {
+      transition: top .25s ease;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 90%;
+      margin: auto;
+      overflow: auto;
+      background: #fff;
+      border-radius: 5px;
+      padding: 1em 2em;
+      height: 70%;
+
+      @include mq($from: desktop) {
+        width: 50%;
+      }
+    }
+  }
+
+  &-close {
+    position: absolute;
+    right: 1em;
+    top: 1.5em;
+    height: 1.1em;
+    cursor: pointer;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &-item {
+      background: #4d4d4d;
+      display: block;
+      height: 4px;
+      margin: 0 0 5px;
+      transition: all 0.3s ease-in-out;
+      width: 30px;
+
+      &:first-child {
+        transform: rotate(45deg);
+        transform-origin: 8px;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+        transform-origin: 10px;
+      }
+    }
+  }
+}
