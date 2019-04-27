@@ -1,12 +1,3 @@
-.contact-address {
-  font-size: 1.25em;
-  font-family: "Impact Grotesk Bold";
-
-  @include mq($from: desktop) {
-    font-size: 1.8em;
-  }
-}
-
 .contact-details {
   font-family: "Impact Grotesk Medium";
 }

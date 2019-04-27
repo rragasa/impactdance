@@ -1,0 +1,23 @@
+.page-title {
+  font-size: 1.25em;
+  font-family: "Impact Grotesk Bold";
+
+  @include mq($from: desktop) {
+    font-size: 1.8em;
+  }
+}
+
+.page-article {
+  &-title {
+    font-family: "Impact Grotesk Semi Bold";
+    text-transform: uppercase;
+  }
+
+  img {
+    width: 100%;
+
+    @include mq($from: desktop) {
+      max-width: 300px;
+    }
+  }
+}
