@@ -6,18 +6,6 @@ $('.hamburger-menu').click(function(e){
   $(this).toggleClass('open');
 });
 
-// open modal
-$('.read-more').click(function(e){
-  e.preventDefault();
-  $('.modal').toggleClass('modal-open');
-});
-
-// close modal
-$('.modal-close').click(function(e){
-  e.preventDefault();
-  $('.modal').removeClass('modal-open');
-});
-
 // Google maps
 
 // Initialize and add the map
@@ -29,4 +17,27 @@ function initMap() {
       document.getElementById('map'), {zoom: 4, center: impactdance});
   // The marker, positioned at impactdance
   var marker = new google.maps.Marker({position: impactdance, map: map});
+}
+
+// Modal
+var modalBtns = document.querySelectorAll(".button");
+modalBtns.forEach(function(btn){
+  btn.onclick = function() {
+    var modal = btn.getAttribute('data-modal');
+    document.getElementById(modal).style.display = "block";
+  }
+});
+
+var closeBtns = document.querySelectorAll(".close");
+closeBtns.forEach(function(btn){
+  btn.onclick = function() {
+    var modal = btn.closest('.modal');
+    modal.style.display = "none";
+  }
+});
+
+window.onclick = function(event) {
+  if (event.target.className === "modal") {
+    event.target.style.display = "none";
+  }
 }

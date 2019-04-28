@@ -7,11 +7,11 @@ $tabletLarge: 720px;
 $desktop: 960px;
 $desktopLarge: 1024px;
 
-// $breakpoint-xs: "(min-width: #{$mobile})";
-// $breakpoint-sm: "(min-width: #{$tablet})";
-// $breakpoint-md: "(min-width: #{$tabletLarge})";
-// $breakpoint-lg: "(min-width: #{$desktop})";
-// $breakpoint-xl: "(min-width: #{$desktopLarge})";
+$breakpoint-xs: "(min-width: #{$mobile})";
+$breakpoint-sm: "(min-width: #{$tablet})";
+$breakpoint-md: "(min-width: #{$tabletLarge})";
+$breakpoint-lg: "(min-width: #{$desktop})";
+$breakpoint-xl: "(min-width: #{$desktopLarge})";
 
 $breakpoint-max-xs: "(max-width: #{$mobile})";
 $breakpoint-max-sm: "(max-width: #{$tablet})";
