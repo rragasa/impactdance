@@ -22,7 +22,7 @@
     width: 100%;
 
     @include mq($from: desktop) {
-      max-width: 300px;
+      max-width: 500px;
     }
   }
 }
